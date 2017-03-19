@@ -1,0 +1,22 @@
+
+<% constraintMenus.forEach(constraint => { %>
+    <li class="map-variable-year-container">
+        <span class="map-variable-year-link refine-menu-header-mobile">
+            <em class="fa odn-caret fa-caret-down"></em>
+            <span>
+                <%= constraint.selected %>
+            </span>
+        </span>
+
+        <ul class="chart-sub-nav-menu" style="display: none;">
+            <% constraint.options.forEach(option => { %>
+                <li>
+                    <a href="<%= navigate.constraint(constraint.name, option).url() %>">
+                        <%= option %>
+                    </a>
+                </li>
+            <% }); %>
+        </ul>
+    </li>
+<% }); %>
+

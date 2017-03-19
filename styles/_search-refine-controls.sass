@@ -1,0 +1,99 @@
+
+.refine-bar
+    background-color: $dark-gray-background-color
+    text-align: left
+    font-size: 16px
+    line-height: 50px
+    padding: 0 0 0 30px
+
+    .tokens
+        @media (max-width: $mobile-width)
+            display: none
+
+        li
+            border: 1px solid $dark-gray-border-color
+
+    .small-api-link
+        position: relative
+        top: 16px
+        margin: 0 30px
+
+    .refine-link
+        color: $blue-text-color
+        cursor: pointer
+        display: inline-block
+        font-size: 16px
+        float: right
+
+        @media (max-width: $mobile-width)
+            display: none
+
+        span
+            padding: 0 30px
+
+        .fa
+            color: $dark-gray-arrow-color
+            margin-left: 10px
+
+        ul
+            background-color: $darker-gray-background-color
+            border-top: 1px solid $dark-gray-border-color
+            display: block
+            list-style-type: none
+            margin: 0
+            min-width: 145px
+            padding: 0
+            position: absolute
+            z-index: 1000
+
+            li
+                border-top: 1px solid $darker-gray-border-color
+                color: white
+                font-size: 14px
+                line-height: 40px
+                margin: 0
+                padding: 0 20px
+
+                a
+                    color: white
+
+            li:first-child
+                border-top: 0
+
+            li:hover
+                background-color: $orange-color
+
+        .refine-view-more
+            background-color: $darker-gray-border-color
+            text-align: center
+
+    .refine-link-selected
+        background-color: $darker-gray-background-color
+        color: white
+
+    #refine-menu-categories
+        min-width: 158px
+
+        li
+            padding-left: 34px
+            position: relative
+            text-transform: capitalize
+            white-space: nowrap
+
+            .fa
+                color: white
+                left: 0
+                position: absolute
+                top: 13px
+
+    .refine-by-label
+        color: $black-text-color
+        float: right
+        font-size: 14px
+        margin-right: 25px
+
+        @media (max-width: $mobile-width)
+            display: none
+
+#catalog-info-box
+    margin: 30px

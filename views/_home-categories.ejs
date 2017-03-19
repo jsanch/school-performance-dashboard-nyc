@@ -1,0 +1,34 @@
+<section class="categories-section">
+    <div class="container" role="navigation">
+        <strong class="section-heading">Data Categories</strong>
+        <ul class="clearfix">
+          <% categories.forEach(function(result) { %>
+            <li>
+                <a href="/search?categories=<%= encodeURIComponent(result.category) %>&ref=hp">
+                  <span class="icon" role="presentation">
+                    <em class="fa <%= result.metadata.icon %>" aria-hidden="true"></em>
+                  </span>
+                  <strong><%= result.category %></strong>
+                </a>
+            </li>
+          <% }); %>
+        </ul>
+    </div>
+</section>
+
+<section class="categories-section-mobile">
+    <strong class="section-heading">Data Categories</strong>
+    <a href class="categories-dropdown-mobile" aria-controls="dataCategoriesList" aria-expanded="false">Select a Category<em class="fa fa-caret-down" aria-hidden="true"></em></a>
+    <div role="navigation">
+        <ul class="categories-list-mobile" id="dataCategoriesList">
+            <% categories.forEach(function(result) { %>
+            <li>
+                <a href="/search?categories=<%= encodeURIComponent(result.category) %>">
+                    <em class="fa <%= result.metadata.icon %>" aria-hidden="true"></em>
+                    <%= result.category %>
+                </a>
+            </li>
+            <% }); %>
+        </ul>
+    </div>
+</section>

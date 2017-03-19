@@ -1,0 +1,134 @@
+@import app
+@import autosuggest
+@import search-bar
+@import search-bar-controls
+@import footer
+
+body
+    background-color: $dark-gray-background-color
+
+.main-section
+    background-color: $gray-background-color
+    box-sizing: border-box
+    padding: 80px 30px 30px
+    width: 100%
+    
+    @media (max-width: $mobile-width)
+        padding: 50px 0 0 0
+
+    .dataset-wrapper
+        background-color: white
+        border: 1px solid $gray-text-color
+        text-align: left 
+
+        @media (max-width: $mobile-width)
+            border: 0
+
+        .dataset-container
+            background-color: white
+            color: $dark-gray-text-color
+            font-size: 14px
+            padding: 65px 90px
+            text-align: left
+
+            @media (max-width: $mobile-width)
+                padding: 30px
+
+            h1
+                color: $black-text-color
+                font-size: 24px
+                font-weight: normal
+                margin: 0
+                padding: 0
+        
+            .publisher
+                color: $blue-text-color
+        
+            .blue-button
+                background-color: $blue-background-color
+        
+            .orange-button
+                background-color: $orange-color
+        
+            .button
+                border-radius: 5px
+                color: white
+                display: inline-block
+                font-size: 16px
+                font-weight: 600
+                line-height: 40px
+                padding: 0 18px
+                margin: 0 5px 0 0
+        
+            .title-container
+                margin-bottom: 20px
+        
+            .button-container
+                margin-bottom: 20px
+        
+            .description-container
+                border-top: 1px solid $gray-text-color
+        
+            .description
+                color: $black-text-color
+
+            .columns-container
+                border-top: 1px solid $gray-text-color
+
+                p
+                    color: $black-text-color
+
+                a
+                    color: $blue-text-color
+                    cursor: pointer
+
+                .table-container
+                    overflow-y: hidden
+                    overflow-x: scroll
+                    @media (min-width: $mobile-width)
+                        overflow-x: hidden
+
+                    table
+                        border-collapse: collapse
+                        border: 1px solid $gray-border-color
+
+                    tr:nth-child(odd)
+                        background-color: $odd-row-background-color
+
+                    th
+                        background-color: $code-background-color
+                        border: 1px solid $gray-border-color
+                        color: $table-black-text-color
+                        font-size: 14px
+                        font-weight: bold
+                        padding: 15px 20px
+                        word-wrap: break-word
+
+                    td
+                        border: 1px solid $gray-border-color
+                        color: $table-black-text-color
+                        font-size: 14px
+                        max-width: 320px
+                        padding: 15px 20px
+                        word-wrap: break-word
+
+        .schema-container
+            background-color: white
+            color: $black-text-color
+            font-size: 14px
+            padding: 0 90px 65px
+
+            a 
+                color: $blue-text-color
+
+            h3
+                margin-top: 40px
+
+            code
+                background-color: $code-background-color
+                display: block
+                padding: 15px 20px
+                word-wrap: break-word
+
+                a
+                    color: $black-text-color

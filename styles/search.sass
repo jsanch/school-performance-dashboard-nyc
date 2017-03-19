@@ -1,0 +1,115 @@
+@import app
+@import search-bar
+@import search-bar-controls
+@import refine-controls-mobile
+@import region-navigation
+@import region-charts
+@import search-refine-controls
+@import search-refine-controls-mobile
+@import search-results-regions
+@import search-results-questions
+@import search-tokens
+@import api-info-box
+@import autosuggest
+@import compare-this-data-menu
+@import current-category-info-box
+@import info-icon
+@import map-summary
+@import charts
+@import chart-tabs
+@import tables
+@import search-results
+@import questions
+@import questions-mobile
+
+// Main section
+//
+.main-section
+    display: table
+    padding-top: 50px
+    width: 100%
+
+// Region page dataset search results
+//
+.search-results
+    background-color: white
+    border: 1px solid $gray-border-color
+    clear: both
+    list-style-type: none
+    margin: 30px
+    padding: 0
+
+    li:first-child
+        border: none
+
+    li
+        border-top: 1px solid $gray-border-color
+        color: $dark-gray-text-color
+        font-size: 14px
+        list-style-type: none
+        margin: 0
+        padding: 30px
+        position: relative
+
+        .tag
+            color: $dark-gray-text-color
+
+        .tagLabel
+            font-weight: 600
+
+        h2
+            margin: 0
+            font-size: 20px
+            font-weight: 300
+
+            a
+                color: $black-text-color
+                word-break: break-word
+
+        a
+            color: $blue-text-color
+            cursor: pointer
+            word-break: break-all
+
+        p
+            color: $black-text-color
+            word-break: break-word
+
+        .fa
+            color: $blue-text-color
+            font-size: 32px
+            float: left
+            margin-left: -45px
+            margin-top: 3px
+
+        .api-link
+            background-color: $green-color
+            border-radius: 3px
+            color: white
+            float: right
+            font-size: 14px
+            font-weight: 600
+            height: 34px
+            line-height: 34px
+            margin: 0 0 10px 10px
+            padding-left: 18px
+            padding-right: 18px
+
+            @media (max-width: $mobile-width)
+                display: none
+
+// Common search header bars
+//
+.search-header-bar
+    background-color: $medium-gray-background-color
+
+    .search-results-header-icon
+        font-size: 24px
+        margin-right: 10px
+        position: relative
+        top: 2px
+
+    .search-results-header-label
+        font-weight: 600
+        margin-right: 8px
+

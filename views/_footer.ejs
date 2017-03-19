@@ -1,0 +1,22 @@
+        <footer role="contentinfo">
+            <a href="http://socrata.com/company-info/" target="_blank" aria-label="Powered by Socrata">
+                <img src="/images/v3-powered-by-socrata.png" alt="Powered by Socrata" role="presentation" />
+            </a>
+        </footer>
+
+        <% include _google-analytics %>
+        <% include _usersnap %>
+
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <% if (typeof asyncCSS !== 'undefined') { %>
+            <% asyncCSS.forEach(path => { -%>
+                <link href="<%= path %>" rel="stylesheet">
+            <% }); -%>
+        <% } %>
+
+        <script><%- javascript %></script>
+    </body>
+</html>

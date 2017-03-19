@@ -1,0 +1,85 @@
+$black-text-color: #222222
+$blue-text-color: #2980b9
+$orange-color: #e74c3c
+
+#map
+    .map-expand-collapse
+        cursor: pointer
+        font-weight: normal
+        font-size: 14px
+
+    .leaflet-popup-tip
+        border: 0
+
+#tooltip, .tooltip, .leaflet-popup-content-wrapper
+    color: $primary-color
+    background-color: $background-color
+    margin: 0
+    box-shadow: none
+    border: 0
+    border-radius: 0
+    word-wrap: break-word
+
+    .leaflet-popup-content
+        margin: 0
+
+        p
+            font-size: 12px
+            margin: 0
+
+    .fa-times
+        color: $black-text-color
+        cursor: pointer
+        float: right
+        margin: 0.75em 0.75em 0 0
+
+    .name
+        font-weight: bold
+        padding: .75em 1em 0 1em
+
+    .value
+        padding: 0 1em 0.75em 1em
+
+        .value-name::after
+            content: ': '
+
+    .tooltip-controls
+        font-weight: bold
+        padding: 0 1em 0.75em 1em
+        text-align: center
+
+        a
+            color: $primary-color
+            cursor: pointer
+            padding-right: 1em
+
+        i
+            padding-right: 0.4em
+            font-size: 14px
+
+        .fa-plus
+            color: $blue-text-color
+
+        .fa-location-arrow
+            color: $orange-color
+
+        .fa-external-link
+            position: relative
+            top: 2px
+
+    .address
+        padding-top: 4px
+        font-style: italic
+
+.leaflet-popup-tip
+    background-color: $background-color
+    box-shadow: none
+    border: 1px solid $primary-color
+
+.no-data-popup
+    .leaflet-popup-content-wrapper
+        .leaflet-popup-content
+            padding: 15px 15px 9px 12px
+
+    a.leaflet-popup-close-button
+        color: black

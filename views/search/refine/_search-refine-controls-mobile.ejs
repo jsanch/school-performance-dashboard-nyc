@@ -1,0 +1,32 @@
+<div class="search-refine-controls-mobile" role="navigation">
+    <div class="search-refine-results-link-container-mobile<%= refinePopupCollapsed ? '' : ' search-refine-controls-mobile-hidden' %>">
+        <a class="search-refine-results-link-mobile">Refine Results</a>
+    </div>
+    <div class="search-refine-popup-mobile<%= refinePopupCollapsed ? ' search-refine-controls-mobile-hidden' : '' %>">
+        <div class="search-refine-popup-mobile-container">
+            <div class="search-refine-popup-inner-container-mobile">
+                <div class="search-refine-similar-regions-mobile">
+                    <a id="search-refine-close-mobile" class="fa fa-caret-up"></a>
+                    <label>Refine by</label>
+                    <% include ../../_search-tokens %>
+                </div>
+                <ul class="search-refine-menu-list-mobile">
+                    <li class="search-refine-menu-list-item-categories-mobile">
+                        <a class="refine-menu-header-mobile">
+                            Categories
+                            <em class="fa fa-caret-down odn-caret"></em>
+                        </a>
+                        <% include _category-list %>
+                    </li>
+                    <li class="search-refine-menu-list-item-domains-mobile">
+                        <a class="refine-menu-header-mobile">
+                            Domains
+                            <em class="fa fa-caret-down odn-caret"></em>
+                        </a>
+                        <% include _publisher-list %>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="map-summary-container">
+    <a class="map-summary-more">More Information</a>
+    <ul class="map-summary-links">
+        <% mapVariables.forEach(variable => { %>
+            <li>
+                <a href="<%= variable.url %>"<%- (entities.length >= 3) ? ' rel="nofollow"' : '' %>><%= variable.name %></a>
+                <% if (variable.mapSummaryLinkDescription) { %>
+                   <p><%= variable.mapSummaryLinkDescription %></p>
+                <% } %>
+            </li>
+        <% }); %>
+    </ul>
+    <div class="cb"></div>
+</div>

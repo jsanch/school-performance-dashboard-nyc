@@ -1,0 +1,36 @@
+
+<section class="refine-bar search-header-bar">
+    <div class="refine-link" role="navigation">
+        <span>Categories<em class="fa fa-caret-down"></em></span>
+        <% include _category-list %>
+    </div>
+
+    <div class="refine-link">
+        <span>Publishers<em class="fa fa-caret-down"></em></span>
+        <% include _publisher-list %>
+    </div>
+
+    <label class="refine-by-label">Refine by:</label>
+    <em class="fa fa-bar-chart search-results-header-icon"></em>
+    <label class="search-results-header-label">
+        <% const datasetCountString = datasetCount.toLocaleString(); %>
+        <% if (query.length) { %>
+            <% if (datasetCount) { %>
+                Found <%= datasetCountString %> datasets for "<%= query %>"
+            <% } else { %>
+                No datasets for "<%= query %>"
+            <% } %>
+        <% } else { %>
+            <% if (datasetCount) { %>
+                Found <%= datasetCountString %> results
+            <% } else { %>
+                Found 0 results
+            <% } %>
+        <% } %>
+    </label>
+
+    <% include ../../_search-tokens %>
+</section>
+
+<div id="catalog-info-box"></div>
+

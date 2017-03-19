@@ -1,0 +1,24 @@
+
+{
+    "jobs": {
+        "occupations": {
+            "constraint": "occupation",
+            "variable": "employed"
+        }
+    },
+
+    "economy": {
+        "cost_of_living": {
+            "constraint": "component",
+            "variable": "index"
+        }
+    },
+
+    "health": {
+        "health_indicators": {
+            "constraint": "question",
+            "variable": "data_value"
+        }
+    }
+}
+

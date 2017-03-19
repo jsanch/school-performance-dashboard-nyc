@@ -1,0 +1,30 @@
+
+$primary-color: #222
+$light-primary-color: #7f8c8d
+$background-color: white
+$border: 1px $primary-color solid
+$background-border: 1px $background-color solid
+$map-height: 500px
+
+$fonts: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif
+$small: 0.75em
+$medium: 14px
+$large: 18px
+
+@import tooltip
+@import legend
+
+.map-container
+    margin: 0
+
+.map-container-expanded
+    height: 500px
+
+.map-container-collapsed
+    height: 300px
+
+img.leaflet-tile
+    pointer-events: none
+
+#map
+    margin: 0 0 35px

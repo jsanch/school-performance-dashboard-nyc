@@ -1,0 +1,31 @@
+<% datasets.forEach(function(dataset) { %>
+    <li>
+        <a class="api-link" href="http://dev.socrata.com/foundry/<%= dataset.domain %>/<%= dataset.fxf %>">API</a>
+        <em class="fa <%= dataset.classification.categoryGlyphString %>"></em>
+        <h2>
+            <a href="/dataset/<%= dataset.domain %>/<%= dataset.fxf %>">
+                <%= dataset.name %>
+            </a>
+        </h2>
+        <a href="http://<%= dataset.domain %>"><%= dataset.domain %></a>
+        <span>| Last Updated <%= dataset.updated_at %></span>
+        <p><%= dataset.description %></p>
+    <% if (dataset.classification.tags.length > 0) { %>
+        <span class="tagLabel">Tags:</span>
+        <% dataset.classification.tags.forEach(function(tag, i) {
+
+            if (i > 0) { %>, <% } %><a class="tag"><%= getTag(tag) %></a><%
+        }); -%>
+    <% } %>
+    </li>
+<% }); %>
+
+<%
+function getTag(tag) {
+    switch (tag.toLowerCase()) {
+        case 'blds': return 'BLDS';
+        case 'lives': return 'LIVES';
+        default: return tag;
+    }
+}
+%>

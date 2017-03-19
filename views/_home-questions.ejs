@@ -1,0 +1,19 @@
+<section class="questions-section">
+    <div class="container">
+        <strong class="section-heading">Questions</strong>
+        <a href class="questions-dropdown" aria-controls="questionsList" aria-expanded="false">Show Sample Questions<em class="fa fa-caret-down" aria-hidden="true"></em></a>
+
+        <div class="questions-list-container" id="questionsList">
+            <ul class="questions-list">
+            <% questions.forEach(function(question, index) { %>
+                <li<% if (index >= 10) { %> class="hidable hidden<% if (index >= 20) { %> hidden-on-mobile<% } %>"<% } %>>
+                    <a href="<%= new Navigate([question.entity]).regionURL(question.vector, question.metric) %>">
+                        <%= question.text %>
+                    </a>
+                </li>
+            <% }); %>
+            </ul>
+            <a href="javascript:void(0)" class="more-questions-link">Show More</a>
+        </div>
+    </div>
+</section>

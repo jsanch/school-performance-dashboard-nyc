@@ -1,0 +1,26 @@
+<div id="google-charts-container">
+    <% if (chartConfig) { %>
+        <% chartConfig.charts.forEach(chart => { %>
+            <div id="<%= chart.id %>" class="chart">
+                <h1>
+                    <%= chart.name %>
+                </h1>
+
+                <div id="chart-<%= chart.id %>" class="chart-container"></div>
+
+                <% if (chart.description || chart.forecast) { %>
+                    <div id="dataset-description-<%= chart.id %>" class="dataset-description">
+                        <% if (chart.description) { %>
+                            <div class="chart-descriptions">
+                                <p><%- chart.description %></p>
+                            </div>
+                        <% } %>
+                        <% if (chart.forecast) { %>
+                            <div class="forecast-descriptions"></div>
+                        <% } %>
+                    </div>
+                <% } %>
+            </div>
+        <% }); %>
+    <% } %>
+</div>

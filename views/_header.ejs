@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <% if (typeof metaSummary != 'undefined') { %><meta name="description" content="<%= metaSummary %>"><% } %>
+        <meta name="keywords" content="open data, government data, housing data, restaurant inspecitions data, transit data, health data, crime data, permit data">
+        <title><%= title %></title>
+        <% css.forEach(function(path) { -%>
+            <link href="<%= path %>" rel="stylesheet">
+        <% }); -%>
+        <script defer src="/lib/third-party/browser-polyfill.min.js"></script>
+        <script defer src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <% scripts.forEach(function(o) { if (typeof o == 'string') { -%>
+            <script defer src="<%= o %>"></script>
+        <% } else { -%>
+            <script defer src="<%= o.url %>" charset="<%= o.charset %>"></script>
+        <% }}); -%>
+    </head>
+    <body>

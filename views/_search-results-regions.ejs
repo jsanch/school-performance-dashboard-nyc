@@ -1,0 +1,20 @@
+<div class="search-results">
+    <div class="search-results-regions">
+        <div class="search-results-regions-row">
+            <% _.chunk(entities, 2).forEach(group => { %>
+                <% group.forEach(entity => { %>
+                    <div class="search-results-regions-cell w50">
+                        <h2>
+                            <a href="<%= navigate.to(entity).ref('search-entity').url() %>">
+                                <%= entity.name %>
+                            </a>
+                            <div class="regionType">
+                                <%= GlobalConfig.regions.names[entity.type] || '' %>
+                            </div>
+                        </h2>
+                    </div>
+                <% }); %>
+            <% }); %>
+        </div>
+    </div>
+</div>

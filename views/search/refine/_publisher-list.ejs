@@ -1,0 +1,13 @@
+
+<ul id="refine-menu-domains" style="display:none">
+    <% allDomains.forEach((domain, index) => { %>
+        <li style="display: <%= index > 5 ? 'none' : 'list-item' %>">
+            <a href="<%- searchNavigate.addDomain(domain.domain).url() %>">
+                <%= domain.domain %>
+            </a>
+        </li>
+    <% }); %>
+
+    <li id="refine-menu-domains-view-more" class="refine-view-more">More</li>
+</ul>
+

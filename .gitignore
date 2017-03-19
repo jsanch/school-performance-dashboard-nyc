@@ -1,0 +1,22 @@
+
+.DS_Store
+.sass-cache
+
+node_modules
+
+*.swp
+*.map
+
+*.geojson
+geo/*/
+*.tm2
+
+# grunt build process
+lib/*.es6.js
+lib/*.js
+styles/compressed
+
+.vscode/
+.idea
+jsconfig.json
+

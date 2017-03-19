@@ -1,0 +1,14 @@
+<% datasets.forEach(dataset => { %>
+    <li>
+        <a class="api-link" href="<%= dataset.dev_docs_url %>">API</a>
+        <em class="fa <%= dataset.categoryGlyphString %>"></em>
+        <h2>
+            <a href="/dataset/<%= dataset.domain %>/<%= dataset.fxf %>">
+                <%= dataset.name %>
+            </a>
+        </h2>
+        <a href="http://<%= dataset.domain %>"><%= dataset.domain %></a>
+        <span>| Last Updated <%= dataset.updated_at %></span>
+        <p><%= dataset.description %></p>
+    </li>
+<% }); %>

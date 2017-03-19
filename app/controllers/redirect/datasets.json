@@ -1,0 +1,15 @@
+
+{
+    "crime": {
+        "city_crime": "fbi_ucr"
+    },
+
+    "education": {
+        "education": "graduation_rates"
+    },
+
+    "health": {
+        "health": "health_behaviors"
+    }
+}
+
